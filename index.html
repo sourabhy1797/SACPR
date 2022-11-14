@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <title> SACPR </title>
+    <style>
+        .card {
+            box-shadow: 0 20px 10px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            width: 80%;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            padding: 8px 16px;
+        }
+
+        div {
+            padding-top: 50px;
+            padding-right: 30px;
+            padding-bottom: 50px;
+            padding-left: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <center>
+            <h1>SACPR: Seek Assistance for CPR</h1>
+            <img src="high level architecture.jpg" height="300" width="400">
+        </center>
+            <p style="text-align:justify">
+                This project is based upon novel <b>LIH (Location Impalpability Heuristics) framework</b>.
+                This project enables the end user/consumer to perform the required action (specifically commute
+                to the task location) without sharing there actual location, and which helps to keep the end user's
+                location based details private to them only.
+                This project is cleaved into two parts, one is related to design and implementation of <b>LIH framework</b>,
+                and another part is to design and implement <b>SACPR model/framework</b>.
+
+            </p>
+
+        
+        
+        <h3>
+            LIH Framework:
+        </h3>
+        <center><img src="LIH.jpg" height="300" width="400"></center><br>
+        <p style="text-align:justify">
+        This algorithm is mainly designed to deduce the probability distribution table among the multiple
+        location.
+        This framework employs building of directional graph based on location nodes and connection between
+        them.
+        Then after performing the mathematical computations, we try to gather probabilities for selecting
+        obfuscated
+        location
+        among the available location nodes. The core aim of this module is to return the probability
+        distribution
+        table
+        which can be utilised
+        for further computations. Since extensive calculations are involved, this algorithm is initially
+        designed in
+        MATLAB, but it can be
+        inherited to frameworks based on python as well.
+        </p>
+        
+        <h3>
+            SACPR:
+        </h3>
+        <center><img src="Information Flow.jpg" height="300" width="400"></center><br>
+        <p style="text-align:justify">
+        This part of project is implement the employs the LIH framework, to implement the use case for critical
+        patients
+        requiring CPR. It allows
+        the patient to ask for help and available volunteers will be notified and depending upon there response
+        of
+        acceptance or rejection, LIH algorithm
+        helps to computes the obfuscated location of the volunteers. Based on obfuscated location, all the
+        further
+        computations such as calculating
+        the distance from the serving location and deducing the volunteer who will finally serve the patient,
+        navigation
+        path to the patients locations, etc.
+        It is typically react native based android application, where Python Flask is employed for backend
+        computations
+        and MongoDB is utilised
+        for database based operations.
+        </p>
+    </div>
+</body>
+
+</html>
